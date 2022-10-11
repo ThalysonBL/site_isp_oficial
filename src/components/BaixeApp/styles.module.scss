@@ -1,0 +1,24 @@
+
+.estiloImg {
+  transition: background-color 1s;
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+}
+
+@media (max-width: 470px) {
+  .estiloImg {
+    width: 150px;
+
+  }
+}
+
+
+.styleTransition {
+  transition: background-color 1s;
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+}

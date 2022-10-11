@@ -1,0 +1,164 @@
+.sectionOne {
+  padding: 48px 112px;
+}
+.estiloTextIcon {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  width: 110px;
+  margin-right: 45px;
+}
+
+.estiloLink {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #131313;
+  text-transform: uppercase;
+  background-color: #ffb700;
+  border: 1px solid #ffb700;
+  border-radius: 6px;
+  padding: 15px 20px;
+
+}
+
+//SECTION TWO
+
+.sectionTwo {
+  flex-direction: column;
+  padding: 91px 112px;
+  background: #ffffff;
+
+  .headingTwo {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #0e0e0e;
+  }
+
+  .descriptionTwo {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    width: 80%;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 33px;
+      letter-spacing: -0.005em;
+      text-align: left;
+    }
+
+    & + .descriptionTwo {
+      margin-top: 2rem;
+    }
+    &:first-child {
+      margin-top: 75px;
+    }
+  }
+
+  .containerQuantidade {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    margin-left: 216px;
+  }
+}
+
+.headingThree {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  width: 517px;
+
+  span {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: underline;
+  }
+}
+
+.containerBeneficios {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 382px;
+  &:first-child {
+    margin-top: 48px;
+  }
+
+  & + .containerBeneficios {
+    margin-top: 24px;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: underline;
+  }
+}
+
+
+//SECTION 4
+
+.headingBeneficios {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.estiloBeneficios {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 47px;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+
+}
+
+
+.headingInBox {
+
+font-size: 32px;
+font-weight: 700;
+line-height: 47px;
+letter-spacing: 0em;
+text-align: left;
+
+margin-bottom: 43px;
+
+}
+.estiloIcon {
+  border: 1px solid #ffffff;
+  color: #FFB700;
+  border-radius: 100%;
+  margin-right: 25px;
+
+}
