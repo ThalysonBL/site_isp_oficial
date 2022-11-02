@@ -1,0 +1,11 @@
+.container {
+  width: 59vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 80vw;
+
+  }
+}

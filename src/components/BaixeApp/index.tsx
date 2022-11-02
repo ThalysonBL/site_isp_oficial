@@ -7,6 +7,10 @@ import styles from "./styles.module.scss"
 import GooglePlay from "../../../public/googlePlay.svg";
 import IconApple from "../../../public/iconApple.svg";
 
+type DadosProps = {
+
+}
+
 export function BaixeApp() {
   const isWideOcultar = useBreakpointValue({
     base: true,
@@ -18,9 +22,6 @@ export function BaixeApp() {
   return (
     <Link
       href="https://play.google.com/store/apps/details?id=com.bittrainers"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
       style={{
         textDecoration: "none",
       }}

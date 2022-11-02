@@ -1,30 +1,130 @@
 .sectionOne {
   padding: 48px 112px;
-}
-.estiloTextIcon {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
-  width: 110px;
-  margin-right: 45px;
-}
+  justify-content: center;
 
+  .headingSectionOne {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    width: 596px;
+  }
+
+  .estiloTextIcon {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin-right: 45px;
+    margin-top: 9px;
+    text-align: left;
+    color: #ffffff;
+    max-width: 110px;
+  }
+
+  .estiloSeta {
+    margin: auto;
+    animation-name: brilho;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out alternate;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes brilho {
+    0% {
+      color: #0e0e0e;
+    }
+
+    10%,
+    90% {
+    }
+  }
+
+  .containerVideo {
+    align-items: center;
+    justify-content: center;
+    height: 436px;
+    width: 592px;
+
+    @media (max-width: 768px) {
+      width: 334px;
+      height: 204px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 0 48px 0;
+
+    .headingSectionOne {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+    }
+
+    .estiloTextIcon {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: center;
+      width: 100px;
+      margin-right: 0;
+    }
+
+    .containerVideo {
+      width: 492;
+      height: 336px;
+    }
+
+    .estiloSeta {
+      margin-top: 30px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+  }
+}
 .estiloLink {
+  background-color: #ffb700;
+  border-radius: 6px;
+  border: 1px solid #ffb700;
+  color: #131313;
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
   letter-spacing: 0em;
   text-align: left;
-  color: #131313;
   text-transform: uppercase;
-  background-color: #ffb700;
-  border: 1px solid #ffb700;
-  border-radius: 6px;
   padding: 15px 20px;
+  transition: background-color 1s;
 
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0em;
+  }
 }
 
 //SECTION TWO
@@ -33,6 +133,7 @@
   flex-direction: column;
   padding: 91px 112px;
   background: #ffffff;
+  justify-content: center;
 
   .headingTwo {
     font-size: 42px;
@@ -49,7 +150,7 @@
     line-height: 33px;
     letter-spacing: -0.005em;
     text-align: left;
-    width: 80%;
+    max-width: 80%;
 
     span {
       font-size: 24px;
@@ -72,93 +173,758 @@
     font-weight: 700;
     line-height: 36px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
 
-    margin-left: 216px;
+    margin-left: 150px;
+  }
+  .containerSomosMais {
+    margin-top: 160px;
+    text-transform: uppercase;
+
+    .containerEmpresas {
+      margin-left: 58px;
+
+      .empresasQueConfiam {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        margin-bottom: 39px;
+      }
+    }
+  }
+  .numberQuantidade {
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 300px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    padding: 64px 20px;
+    .headingTwo {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+    .descriptionTwo {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: -0.005em;
+      text-align: center;
+      margin: auto;
+
+      & + .descriptionTwo {
+        margin-top: 1rem;
+      }
+      &:first-child {
+        margin-top: 19px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.005em;
+        text-align: center;
+      }
+    }
+
+    .containerSomosMais {
+      margin-top: 87px;
+
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: left;
+      flex-direction: column;
+
+      .containerEmpresas {
+        margin: auto;
+        margin-top: 32px;
+
+        .empresasQueConfiam {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          letter-spacing: -0.01em;
+          text-align: left;
+          margin-bottom: 30px;
+        }
+      }
+
+      .containerQuantidade {
+        margin: auto;
+      }
+    }
+
+    .numberQuantidade {
+      font-size: 128px;
+      font-weight: 800;
+      line-height: 192px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
   }
 }
 
-.headingThree {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 53px;
-  letter-spacing: 0em;
-  text-align: left;
+.image {
+  //filter: brightness(0%);
 
-  width: 517px;
+  -webkit-filter: grayscale(100%);
 
-  span {
+  & + .image {
+    background: #000;
+    margin-left: 200px;
+  }
+}
+.image:hover {
+  -webkit-filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+//SECTION 3
+
+.containerSectionThree {
+  background-color: #ffb700;
+  padding: 95px 112px;
+  justify-content: center;
+
+  .headingThree {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 53px;
     letter-spacing: 0em;
     text-align: left;
-    text-decoration: underline;
-  }
-}
 
-.containerBeneficios {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0em;
-  text-align: left;
-  width: 382px;
-  &:first-child {
-    margin-top: 48px;
+    max-width: 517px;
+
+    span {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 53px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-decoration: underline;
+    }
+  }
+  .containerBeneficios {
+    display: flex;
+    &:first-child {
+      margin-top: 48px;
+    }
+
+    & + .containerBeneficios {
+      margin-top: 24px;
+    }
   }
 
-  & + .containerBeneficios {
-    margin-top: 24px;
-  }
-
-  span {
+  .beneficiosText {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-    text-decoration: underline;
+
+    width: 60%;
+
+    span {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 65px 19px;
+    justify-content: center;
+    align-items: center;
+
+    .headingThree {
+      font-size: 20px;
+      font-weight: 400;
+      margin: auto;
+      max-width: 336px;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+
+      span {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+    }
+    .containerBeneficios {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+//SECTION 4
+
+.containerSectionFour {
+  flex-direction: column;
+  background-color: #f6f6f6;
+  justify-content: center;
+  padding-top: 112px;
+  .headingBeneficios {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .descBeneficios {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .containerCaixa {
+    background-color: #131313;
+    color: #ffffff;
+    margin: 63px 112px 24px 112px;
+
+    justify-content: space-between;
+    padding: 0 30px 112px 74px;
+    border-radius: 8px;
+    .contentCaixa {
+      flex-direction: column;
+
+      border-right: 1px solid #ffb700;
+
+      max-width: 60%;
+      padding: 0 90px 0 0;
+      &:last-child {
+        border-right: none;
+        max-width: 100%;
+        margin-left: 72px;
+      }
+
+      .headingInBox {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 47px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 56px;
+
+        margin-bottom: 43px;
+      }
+
+      .estiloBeneficios {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        color: #ffffff;
+        max-width: 407px;
+      }
+      .estiloIcon {
+        border: 1px solid #ffffff;
+        border-radius: 100%;
+        color: #ffb700;
+        margin-right: 25px;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 48px;
+
+    .headingBeneficios {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 35px;
+      letter-spacing: 0em;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .descBeneficios {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: -0.01em;
+      text-align: center;
+      margin-bottom: 48px;
+      padding: 0 20px;
+    }
+    .containerCaixa {
+      margin: 0;
+      padding: 0;
+
+      .contentCaixa {
+        border-right: none;
+        border-bottom: 1px solid #ffb700;
+        padding: 29px 11px 29px 50px;
+        max-width: 200%;
+
+        &:last-child {
+          border-bottom: none;
+          margin-left: 0;
+        }
+
+        .estiloBeneficios {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 33px;
+          letter-spacing: -0.01em;
+          text-align: left;
+        }
+        .headingInBox {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 23px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin-top: 56px;
+        }
+        .estiloIcon {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+//Estilo redes para baixar app
+
+.contentComoFunciona {
+  justify-content: center;
+
+  flex-direction: column;
+  padding: 0 112px 130px 112px;
+  background-color: #f6f6f6;
+
+  .vejaComoFunciona {
+    margin-top: 110px;
+    margin-bottom: 57px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .containerVideo {
+    height: 604px;
+    width: 1216px;
+  }
+  .textAcessePlatf {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    margin-top: 61px;
+  }
+
+  .estiloImg {
+    transition: background-color 1s;
+    width: auto;
+    height: 60px;
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+  }
+
+  .styleTransition {
+    display: flex;
+    align-items: center;
+
+    background-color: #ffb700;
+    border-radius: 6px;
+    border: 2px solid #ffb700;
+    padding: 10px 15px 10px 21px;
+    margin-bottom: 32px;
+    justify-content: flex-start;
+
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+  }
+  .textDisponivel {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+  }
+  .textLoja {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+  }
+  @media (max-width: 768px) {
+    padding: 0 20px 80px 20px;
+    .estiloImg {
+      width: 200px;
+
+      & + .estiloImg {
+        margin-top: 24px;
+      }
+    }
+    .styleTransition {
+      padding: auto;
+    }
+
+    .vejaComoFunciona {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .containerVideo {
+      width: 336px;
+      height: 216px;
+    }
+    .textAcessePlatf {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 31px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+}
+//section five
+
+.containerSectionFive {
+  background-color: #ffb700;
+  padding: 109px 112px;
+  justify-content: space-between;
+
+  .reduzaCargaTitle {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .reduzaDescription {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    margin-top: 19px;
+    margin-bottom: 78px;
+    max-width: 416px;
+  }
+
+  .containerGrafico {
+    background-color: #f6f6f6;
+    padding: 69px 60px 69px 70px;
+    flex-direction: column;
+
+    .textGrafico {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: left;
+      width: 350px;
+      margin-bottom: 56px;
+    }
+  }
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 44px 0;
+
+    .reduzaCargaTitle {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 35px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .reduzaDescription {
+      margin: 46px auto;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .containerGrafico {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 0 44px 0;
+
+      .textGrafico {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin-bottom: 54px;
+      }
+    }
+  }
+}
+//section 6
+
+.containerSix {
+  background-image: url("../public/ImgBgSheila.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: auto;
+  padding: 168px 112px;
+  justify-content: center;
+
+  .textUtilizeImg {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.52);
+    margin-bottom: 60px;
+    max-width: 624px;
+
+    .textUtilizeImgHead {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 62px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ffffff;
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.005em;
+      text-align: center;
+
+      .textUtilizeImgHead {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 47px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    padding: 72px 20px;
+  }
+  @media (max-width: 375px) {
+    height: 425px;
+    justify-content: center;
+    align-items: center;
+    padding: 72px 20px;
   }
 }
 
+//section seven
+.containerSectionSeven {
+  background-color: #f6f6f6;
+  align-items: center;
+  padding: 109px 61px 111px 112px;
+  justify-content: center;
 
-//SECTION 4
+  .sectionSevenHeading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: left;
 
-.headingBeneficios {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 62px;
-  letter-spacing: 0em;
-  text-align: center;
+    .sevenDescription {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 35px;
+      letter-spacing: -0.005em;
+      text-align: left;
+      max-width: 530px;
+      margin-bottom: 42px;
+      margin-top: 32px;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 65px 20px 93px 20px;
+
+    .ImgSeven {
+      width: 352.09px;
+      height: 230px;
+    }
+
+    .sectionSevenHeading {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .sevenDescription {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: -0.005em;
+      text-align: center;
+    }
+  }
 }
 
-.estiloBeneficios {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 47px;
-  letter-spacing: -0.01em;
-  text-align: left;
+//Section Eight
 
+.containerSectionEight {
+  background-color: #131313;
+  padding: 30px 112px 0 112px;
+  justify-content: center;
 
+  .contentSectionEight {
+    .headingEight {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 38px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    .conversarComSuporte {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: 0em;
+
+      color: #ffb700;
+      text-align: left;
+
+      margin-top: 1rem;
+      text-decoration: underline;
+      text-decoration-color: #ffb700;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 27px 20px 40px 20px;
+    justify-content: center;
+    align-items: center;
+
+    .contentSectionEight {
+      flex-direction: column;
+
+      .headingEight {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+    }
+  }
 }
 
+//section nine
 
-.headingInBox {
+.containerSectionNine {
+  background: #ffb700;
+  padding: 117px 112px;
+  justify-content: center;
 
-font-size: 32px;
-font-weight: 700;
-line-height: 47px;
-letter-spacing: 0em;
-text-align: left;
+  .headingNine {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 81px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    width: 50%;
+  }
 
-margin-bottom: 43px;
+  .descNine {
+    margin-top: 47px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    width: 80%;
+  }
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 56px 20px;
+
+    .headingNine {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 35px;
+      letter-spacing: -0.005em;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .descNine {
+      margin-top: 24px;
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: -0.005em;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+  }
 }
-.estiloIcon {
-  border: 1px solid #ffffff;
-  color: #FFB700;
-  border-radius: 100%;
-  margin-right: 25px;
 
+// SECTION 10
+
+.containerSectionTen {
+  background: #ffffff;
+  padding: 113px 112px;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 72px 20px;
+  }
+}
+
+.containerSlideOne {
+  width: 100vw;
 }

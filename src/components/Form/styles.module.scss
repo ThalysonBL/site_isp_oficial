@@ -1,0 +1,102 @@
+.containerForm {
+  align-items: flex-start;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 8px 24px;
+  max-width: 488px;
+  .styleLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & + .styleLabel {
+      margin-top: 10px;
+    }
+  }
+
+  .estiloInput {
+    display: flex;
+    background: #f3f3f4;
+    border-radius: 8px;
+    width: 286px;
+    height: 56px;
+    padding-left: 1rem;
+    margin-top: 11px;
+  }
+
+  .estiloCkeckboxEspaco {
+    size: 2rem;
+    margin-right: 10px;
+  }
+
+  .styleLabelCheckbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+
+    &:last-child {
+      margin-top: 18px;
+    }
+  }
+  .textForm {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .linkForm {
+    margin: auto;
+    background-color: #131313;
+    border-radius: 6px;
+    color: #ffb700;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 14px 123px;
+    transition: background-color 1s;
+  }
+
+  @media (max-width: 768px) {
+    .styleLabel {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+
+    .styleLabelCheckbox {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+
+    .textForm {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.01em;
+      text-align: left;
+    }
+
+    .linkForm {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      text-align: center;
+      padding: 14px 70px;
+
+    }
+  }
+}
