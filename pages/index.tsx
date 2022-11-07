@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import {
@@ -15,7 +16,6 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  Lorem,
   ModalFooter,
   Button,
   useDisclosure,
@@ -25,10 +25,10 @@ import {
   FormHelperText,
   Checkbox,
 } from "@chakra-ui/react";
-import ImgSumicity from "../public/ImgSumicity.png";
-import ImgWebby from "../public/ImgWebby.png";
-import ImgBlink from "../public/ImgBlink.png";
-import ImgGiganet from "../public/ImgGiganet.png";
+import ImgSumicityColorida from "../public/ImgSumicityColorida.png";
+import ImgWebbyColorida from "../public/ImgWebbyColorida.png";
+import ImgBlinkColorida from "../public/ImgBlinkColorida.png";
+import ImgGiganetColorida from "../public/ImgGiganetColorida.png";
 
 import ImgDevice from "../public/ImgDevices.png";
 import GooglePlay from "../public/googlePlay.svg";
@@ -54,6 +54,15 @@ import { SlideOne } from "../src/components/SlideOne";
 import { ModalErps } from "../src/components/ModalErps";
 
 const Home: NextPage = () => {
+  const formulario = useRef(null);
+
+  const scrollToSection = (elementRef: any) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   const state = {
     url: null,
     pip: false,
@@ -118,15 +127,24 @@ const Home: NextPage = () => {
       <Flex
         className={styles.sectionOne} //Section One
       >
-        <Box>
+        <Box pr={["0", "0", "0", "5rem"]}>
           <Text className={styles.headingSectionOne} px="auto">
             O maior streaming de saúde
             {!hideBr} e bem-estar do Brasil {!hideBr} serviço do seu provedor
           </Text>
-          <Flex mt="20px" display={["none", "none", "none", "flex", "flex"]}>
+
+          <Flex
+            mt="20px"
+            display={["none", "none", "none", "flex", "flex", "flex"]}
+          >
             {lista.map((item) => {
               return (
-                <Box key="id">
+                <Box
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="flex-start"
+                  key="id"
+                >
                   <Image src={IconI} alt="Icon I" />
                   <Text className={styles.estiloTextIcon}>
                     {item.description}
@@ -136,63 +154,66 @@ const Home: NextPage = () => {
             })}
           </Flex>
           <Flex justifyContent="space-between" mt="28px">
-            <Link
-              display={["none", "none", "none", "none", "flex"]}
+            <Text
+              display={["none", "none", "none", "Flex", "flex", "flex"]}
               className={styles.estiloLink}
               style={{
                 textDecoration: "none",
               }}
+              onClick={() => scrollToSection(formulario)}
             >
               Fale com o especialista
-            </Link>
-            {!isWideOcultar && (
-              <Box pr="40px">
-                <AiOutlineArrowDown
-                  size="1.8rem"
-                  color="#FFFFFF"
-                  className={styles.estiloSeta}
-                />
-              </Box>
-            )}
-          </Flex>
-        </Box>
-        <Flex className={styles.containerVideo}>
-          <iframe
-            src="https://player.vimeo.com/video/757298537?h=11c0fa14aa"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            width="100%"
-            height="100%"
-          ></iframe>
-        </Flex>
-        <Link
-          mt="14px"
-          display={["Flex", "Flex", "flex", "none", "none"]}
-          className={styles.estiloLink}
-          style={{
-            textDecoration: "none",
-          }}
-        >
-          Fale com o especialista
-        </Link>
-        {isWideOcultar && (
-          <Flex
-            flexDirection="column"
-            display={["flex", "flex", "flex", "none", "none"]}
-            justifyContent="center"
-            alignItems="center"
-          >
-            <SlideOne />
-            <Flex justifyContent="center" alignItems="center" width="200px">
+            </Text>
+
+            <Box
+              pr="40px"
+              display={["none", "none", "none", "Flex", "flex", "flex"]}
+            >
               <AiOutlineArrowDown
                 size="1.8rem"
                 color="#FFFFFF"
                 className={styles.estiloSeta}
               />
-            </Flex>
+            </Box>
           </Flex>
-        )}
+        </Box>
+        <Flex className={styles.containerVideo}>
+          <iframe
+            src="https://player.vimeo.com/video/757298537?h=11c0fa14aa"
+            allow="autoplay; fullscreen; picture-in-picture"
+            width="100%"
+            height="100%"
+          ></iframe>
+       
+        <Flex>
+          <Link
+            mt="14px"
+            display={["bl", "Flex", "Flex", "none", "none", "none"]}
+            className={styles.estiloLink}
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            Fale com o especialista
+          </Link>
+        </Flex>
+        <Flex
+          flexDirection="column"
+          display={["flex", "flex", "Flex", "none", "none", "none"]}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <SlideOne />
+
+          <Flex justifyContent="center" alignItems="center" width="200px">
+            <AiOutlineArrowDown
+              size="1.8rem"
+              color="#FFFFFF"
+              className={styles.estiloSeta}
+            />
+          </Flex>
+        </Flex>
+      </Flex>
       </Flex>
       <Flex
         as="section"
@@ -236,6 +257,7 @@ const Home: NextPage = () => {
               style={{
                 textDecoration: "none",
               }}
+              onClick={() => scrollToSection(formulario)}
             >
               Quero começar agora!
             </Link>
@@ -254,38 +276,38 @@ const Home: NextPage = () => {
               Empresas que confiam em nós:
             </Text>
             <Flex>
-              <HStack spacing="50px" display="flex" alignitems="center">
+              <HStack spacing="50px" display="flex" alignItems="center">
                 <Box>
                   <Image
-                    src={ImgSumicity}
-                    alt="Imagem Ifood"
+                    src={ImgSumicityColorida}
+                    alt="Imagem provedor"
                     className={styles.image}
                   />
                 </Box>
                 <Box>
                   <Image
-                    src={ImgGiganet}
-                    alt="Imagem Ifood"
+                    src={ImgGiganetColorida}
+                    alt="Imagem provedor"
                     className={styles.image}
                   />
                 </Box>
                 <Box>
                   <Image
-                    src={ImgBlink}
-                    alt="Imagem Ifood"
+                    src={ImgBlinkColorida}
+                    alt="Imagem provedor"
                     className={styles.image}
                   />
                 </Box>
                 <Box>
                   <Image
-                    src={ImgWebby}
-                    alt="Imagem Ifood"
+                    src={ImgWebbyColorida}
+                    alt="Imagem provedor"
                     className={styles.image}
                   />
                 </Box>
               </HStack>
             </Flex>
-            <Box mt={["53px", "53px", "53px", "70px"]} align="center">
+            <Box mt={["53px", "53px", "53px", "70px"]}>
               <ModalErps />
             </Box>
           </Box>
@@ -353,6 +375,7 @@ const Home: NextPage = () => {
               color="#FFB700"
               bg="#000000"
               maxWidth="384px"
+              onClick={() => scrollToSection(formulario)}
               style={{
                 textDecoration: "none",
               }}
@@ -527,14 +550,12 @@ const Home: NextPage = () => {
             <Flex
               width="100%"
               justifyContent="center"
-              alignitems="center"
+              alignItems="center"
               borderRadius="6px"
             >
               <iframe
                 src="https://player.vimeo.com/video/757301023?h=06fd24c203"
-                frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
                 className={styles.containerVideo}
               ></iframe>
             </Flex>
@@ -627,7 +648,7 @@ const Home: NextPage = () => {
               </HStack>
             </Flex>
           </Box>
-          <Flex mx="auto" alingItems="center" mt="64px">
+          <Flex mx="auto" alignItems="center" mt="64px">
             <Image src={IconEscudo} alt="Imagem de um escudo" />
             <Text
               fontWeight="400"
@@ -646,7 +667,7 @@ const Home: NextPage = () => {
         className={styles.containerSectionFive}
         justifyContent="center"
       >
-        <Box width={["90%", "90%", "90%", "100%"]} mr={["0", "0", "0", "72px"]}>
+        <Box width={["90%", "90%", "90%", "40%"]} mr={["0", "0", "0", "72px"]}>
           <Text className={styles.reduzaCargaTitle}>
             Reduza a carga tributária do seu provedor
           </Text>
@@ -663,6 +684,7 @@ const Home: NextPage = () => {
               bg="#1E1E1E"
               color="#FFFFFF"
               border="none"
+              onClick={() => scrollToSection(formulario)}
               padding="16px 70px"
               style={{
                 textDecoration: "none",
@@ -709,13 +731,9 @@ const Home: NextPage = () => {
                   <Image src={ImgSetaTop} alt="Imagem Seta" />
                 </Flex>
               </Box>
-
-              <Image
-                src={ImgGrafico}
-                alt="Imagem gráfico"
-                width="355px"
-                height="178px"
-              />
+              <Box>
+                <Image src={ImgGrafico} alt="Imagem gráfico" height="178px" />
+              </Box>
               <Flex
                 fontSize="10px"
                 fontWeight="600"
@@ -743,7 +761,7 @@ const Home: NextPage = () => {
                 fontSize="14px"
                 fontWeight="500"
                 lineHeight="21px"
-                letterApacing="0em"
+                letterSpacing="0em"
                 textAlign="left"
               >
                 Carga de impostos a cada
@@ -759,7 +777,7 @@ const Home: NextPage = () => {
                   fontSize="14px"
                   fontWeight="500"
                   lineHeight="21px"
-                  letterApacing="0em"
+                  letterSpacing="0em"
                   textAlign="left"
                 >
                   Economia de
@@ -810,7 +828,7 @@ const Home: NextPage = () => {
         <Text
           display={["flex", "flex", "flex", "none"]}
           className={styles.reduzaDescription}
-          width="335px"
+          maxWidth="335px"
           align="center"
           mx="auto"
         >
@@ -825,6 +843,7 @@ const Home: NextPage = () => {
           border="none"
           padding="16px 68px"
           mx="auto"
+          onClick={() => scrollToSection(formulario)}
           width="309px"
           mt="59px"
           style={{
@@ -881,6 +900,7 @@ const Home: NextPage = () => {
             style={{
               textDecoration: "none",
             }}
+            onClick={() => scrollToSection(formulario)}
             padding=" 16px 80px"
           >
             Quero saber mais
@@ -890,7 +910,7 @@ const Home: NextPage = () => {
       <Box
         display={["block", "block", "block", "none"]}
         color="#FFFFFF85"
-        width="336px"
+        maxWidth="336px"
         fontSize="14px"
         fontWeight="400"
         lineHeight="20px"
@@ -913,6 +933,8 @@ const Home: NextPage = () => {
           color="##131313"
           mt="29px"
           mb="88px"
+          mx="20px"
+          onClick={() => scrollToSection(formulario)}
           style={{
             textDecoration: "none",
           }}
@@ -939,6 +961,7 @@ const Home: NextPage = () => {
                 style={{
                   textDecoration: "none",
                 }}
+                onClick={() => scrollToSection(formulario)}
               >
                 Quero saber mais
               </Link>
@@ -960,6 +983,7 @@ const Home: NextPage = () => {
               className={styles.estiloLink}
               mx="auto"
               mt="24px"
+              onClick={() => scrollToSection(formulario)}
               style={{
                 textDecoration: "none",
               }}
@@ -985,14 +1009,22 @@ const Home: NextPage = () => {
               Temos integração com <br />
               todos ERP’s do mercado
             </Text>
-            <Link display={["none", "none", "none", "flex"]}>
+            <Link
+              display={["none", "none", "none", "flex"]}
+              onClick={() => scrollToSection(formulario)}
+            >
               <Text className={styles.conversarComSuporte}>
                 Falar com suporte agora
               </Text>
             </Link>
           </Box>
           <SlideErp />
-          <Link display={["flex", "flex", "flex", "none"]} mx="auto" mt="60px">
+          <Link
+            display={["flex", "flex", "flex", "none"]}
+            onClick={() => scrollToSection(formulario)}
+            mx="auto"
+            mt="60px"
+          >
             <Text className={styles.conversarComSuporte}>
               Falar com suporte agora
             </Text>
@@ -1003,6 +1035,7 @@ const Home: NextPage = () => {
       <Flex
         as="section" //section nine
         className={styles.containerSectionNine}
+        ref={formulario}
       >
         <Box>
           <Text className={styles.headingNine}>Pronto para começar?</Text>
@@ -1011,7 +1044,9 @@ const Home: NextPage = () => {
             o seu provedor.
           </Text>
         </Box>
-        <Form />
+        <Box>
+          <Form />
+        </Box>
       </Flex>
       <Flex
         as="section" //section ten
@@ -1065,6 +1100,7 @@ const Home: NextPage = () => {
                   lineHeight="30px"
                   letterSpacing="0em"
                   textAlign="center"
+                  onClick={() => scrollToSection(formulario)}
                   bg="#FFB700"
                   color="#000000"
                   padding="13px 45px 13px 45px"
@@ -1087,13 +1123,13 @@ const Home: NextPage = () => {
             >
               <Link
                 display={["none", "none", "none", "block"]}
-                href="https://ev.braip.com/checkout/plardw8w/cheyj9rv"
                 flexDirection="row-reverse"
                 justifyContent="center"
                 isExternal
                 fontSize="20px"
                 fontWeight="600"
                 lineHeight="30px"
+                onClick={() => scrollToSection(formulario)}
                 style={{ textDecoration: "none" }}
                 borderRadius="6px"
                 padding={["13px 68px", "13px 68px", "13px 68px", "13px 68px"]}

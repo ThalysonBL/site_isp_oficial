@@ -25,13 +25,49 @@
   }
 }
 
-.containerModalSlides {
-  //background: #000;
+.slides {
   width: 100%;
-  height: 60vh;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContainer {
+
+}
+.containerModalSlides {
+  width: 100%;
+  height: 80vh;
+  padding-bottom: 1rem;
+
+  @media(max-width:425px) {
+    height: 50vh;
+  }
 }
 
 .containerSlider {
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+}
+
+.image {
+  filter: brightness(0%);
+
+  //-webkit-filter: grayscale(100%);
+}
+
+.sectionSlide {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.lineOne {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

@@ -95,6 +95,11 @@ export  function Footer() {
                   Sobre Nós
                 </Link>
               </ListItem>
+              <ListItem as="li">
+                <Link href="/index" style={{ textDecoration: "none" }}>
+                  SVA
+                </Link>
+              </ListItem>
 
             </UnorderedList>
             <UnorderedList
@@ -162,7 +167,7 @@ export  function Footer() {
                   </Link>
                 </ListItem>
                 <ListItem as="li">
-                  <Link href="" style={{ textDecoration: "none" }}>
+                  <Link href="/index" style={{ textDecoration: "none" }}>
                     SVA
                   </Link>
                 </ListItem>

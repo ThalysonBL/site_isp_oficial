@@ -52,7 +52,6 @@ export function SlideOne() {
   return (
     <Carousel
       responsive={responsive}
-      
       slidesToSlide={1}
       showDots={false}
       arrows={false}
@@ -62,8 +61,7 @@ export function SlideOne() {
       {lista.map((item) => {
         return (
           <Flex
-            key="id"
-            display="flex"
+            key={item.id}
             flexDirection="column"
             mt="32px"
             mx="40px"

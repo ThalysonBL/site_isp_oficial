@@ -1,0 +1,35 @@
+.container {
+
+
+.estiloLink {
+  color: var(--yellow-100);
+  font-weight: 500;
+
+  a {
+    padding: 8px 0;
+  }
+  //margin-left: 15px; //foi retirado 15px do padding para acrescentar a barra do hover
+
+  &:hover {
+    border-bottom: 1px solid var(--yellow-100);
+  }
+}
+
+.assineAgora {
+  width: 150px;
+
+  background-color: var(--yellow-100);
+  font-weight: 600;
+  line-height: 150%;
+  transition: color 0.5s;
+  transition: background-color 0.5s;
+  border: 1px solid var(--yellow-100);
+  border-radius: 6px;
+  padding: 8px 15px 8px 19px;
+
+  &:hover {
+    color: var(--yellow-100);
+    background-color: #0e0e0e;
+  }
+}
+}

@@ -1,15 +1,16 @@
 .sectionOne {
   padding: 48px 112px;
-  justify-content: center;
+  justify-content: space-between;
 
   .headingSectionOne {
+    display: flex;
     font-size: 42px;
     font-weight: 700;
     line-height: 62px;
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
-    width: 596px;
+    max-width: 596px;
   }
 
   .estiloTextIcon {
@@ -44,8 +45,10 @@
   }
 
   .containerVideo {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
     height: 436px;
     width: 592px;
 
@@ -54,22 +57,34 @@
       height: 204px;
     }
   }
+  @media (max-width: 1024px) {
+    .headingSectionOne {
+      padding-left: 20px;
+      font-size: 35px;
+
+      font-weight: 700;
+      letter-spacing: 0em;
+      text-align: left;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 995px) {
+    flex-direction: column;
+  }
 
   @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
     justify-content: center;
     padding: 48px 0 48px 0;
-
     .headingSectionOne {
       font-size: 20px;
       font-weight: 700;
       line-height: 29px;
       letter-spacing: 0em;
       text-align: center;
-      align-items: center;
-      width: 80%;
-      margin: auto;
     }
 
     .estiloTextIcon {
@@ -78,13 +93,20 @@
       line-height: 21px;
       letter-spacing: 0em;
       text-align: center;
-      width: 100px;
+      max-width: 100px;
       margin-right: 0;
     }
 
     .containerVideo {
-      width: 492;
-      height: 336px;
+      max-width: 492px;
+      max-height: 336px;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+
+      @media (max-width: 375px) {
+        max-width: 300px;
+        max-height: 336px;
+      }
     }
 
     .estiloSeta {
@@ -113,6 +135,7 @@
   text-transform: uppercase;
   padding: 15px 20px;
   transition: background-color 1s;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     display: flex;
@@ -175,14 +198,14 @@
     letter-spacing: 0em;
     text-align: center;
 
-    margin-left: 150px;
+    margin-left: auto;
   }
   .containerSomosMais {
     margin-top: 160px;
     text-transform: uppercase;
 
     .containerEmpresas {
-      margin-left: 58px;
+      margin-left: 200px;
 
       .empresasQueConfiam {
         font-size: 24px;
@@ -245,9 +268,10 @@
       letter-spacing: 0em;
       text-align: left;
       flex-direction: column;
+      justify-content: space-between;
 
       .containerEmpresas {
-        margin: auto;
+        margin-left: 0;
         margin-top: 32px;
 
         .empresasQueConfiam {
@@ -295,7 +319,7 @@
 .containerSectionThree {
   background-color: #ffb700;
   padding: 95px 112px;
-  justify-content: center;
+  justify-content: space-between;
 
   .headingThree {
     font-size: 36px;
@@ -400,10 +424,10 @@
   .containerCaixa {
     background-color: #131313;
     color: #ffffff;
-    margin: 63px 112px 24px 112px;
+    margin: 63px 110px 24px 110px;
 
-    justify-content: space-between;
-    padding: 0 30px 112px 74px;
+    justify-content: center;
+    padding: 0 30px 0 74px;
     border-radius: 8px;
     .contentCaixa {
       flex-direction: column;
@@ -411,7 +435,7 @@
       border-right: 1px solid #ffb700;
 
       max-width: 60%;
-      padding: 0 90px 0 0;
+      padding: 0 50px 100px 0;
       &:last-child {
         border-right: none;
         max-width: 100%;
@@ -445,10 +469,14 @@
         margin-right: 25px;
       }
     }
+    @media (max-width: 870px) {
+      margin: 63px 20px 24px 20px;
+    }
     @media (max-width: 768px) {
       flex-direction: column;
     }
   }
+
   @media (max-width: 768px) {
     padding-top: 48px;
 
@@ -649,10 +677,14 @@
       line-height: 30px;
       letter-spacing: 0em;
       text-align: left;
-      width: 350px;
+      max-width: 350px;
       margin-bottom: 56px;
     }
   }
+  @media (max-width: 990px) {
+    flex-direction: column;
+  }
+
   @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
@@ -881,7 +913,7 @@
     line-height: 46px;
     letter-spacing: -0.005em;
     text-align: left;
-    width: 80%;
+    width: 60%;
   }
 
   @media (max-width: 768px) {
@@ -926,5 +958,5 @@
 }
 
 .containerSlideOne {
-  width: 100vw;
+  max-width: 100vw;
 }
